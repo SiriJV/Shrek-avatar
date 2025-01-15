@@ -1,0 +1,36 @@
+@mixin avatarImg($url, $width, $height, $color) {
+    background-image: url($url);
+    border-radius: 50%;
+    width: $width;
+    height: $height;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid $color;
+}
+
+#avatar-container {
+    display: flex;
+    gap: 10px;
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+        background-color: rgb(0, 171, 37);
+        border: 2px solid black;
+    }
+
+    p {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        width: 200px;
+    }
+}
+
+#Shrek {
+    @include avatarImg($url: "https://m.media-amazon.com/images/S/pv-target-images/dbf6812f59e5080cf420f1056bfceb66f7d6a43a8df19ace503ea70596afc0ff._SX1080_FMjpg_.jpg", $width: 150px, $height: 150px, $color: black);
+}
+#Donkey {
+    @include avatarImg($url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0CJswck65iASb-e33OFU3XCBNCyuTqx9L4w&s", $width: 150px, $height: 150px, $color: black);
+}
